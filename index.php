@@ -5,27 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>App Propinas</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>App propinas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/calculator-solid.svg" type="image/x-icon">
+    <script src="js/code.js"></script>
 </head>
 
 <body>
-    <form action="processes/calculo.proc.php" method="POST">
-        <p>Total De La Cuenta:</p> 
-        <input type="text" name="precio" placeholder="total a pagar...">
-        <p>¿Que tal el servicio?</p>
-        <select name="opinion">
-            <option value="0.05">5% Mala</option>
-            <option value="0.1" selected >10% Normal</option>
-            <option value="0.2">20% Bueno</option>
-            <option value="0.3">30% Excelente</option>
-        </select>
-        <p>¿Cuantas personas van a pagar?</p>
-        <input type="number" name="personas" placeholder="1">
-        <p>
+    <div class="main">
+        <div>
+            <h2>Calculador de propinas</h2>
+        </div>
+        <form onsubmit="calculo();">
+            <input type="number" name="cuenta" id="" placeholder="total de la cuenta...">
+            <!--step="0.01"-->
+            <select name="servicio" id="">
+                <option value="0.3">30% Excelente</option>
+                <option value="0.2">20% Bueno</option>
+                <option value="0.1" selected>10% Normal</option>
+                <option value="0.05">5% Malo</option>
+            </select>
+            <input type="number" name="personas" id="" placeholder="Â¿cuentas personas van a pagar?">
             <input type="submit" value="Calcular" name="submit">
-        </p>
-    </form>
+
+        </form>
+
+    </div>
 </body>
 
 </html>
